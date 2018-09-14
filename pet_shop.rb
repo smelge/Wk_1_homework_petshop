@@ -34,3 +34,42 @@ def pets_by_breed(shop_input,breed)
   end
   return pet_name_array
 end
+
+def find_pet_by_name(shop_input,pet_name)
+  for pet in shop_input[:pets]
+    if pet[:name] == pet_name
+      return pet
+    end
+  end
+  return
+end
+
+def remove_pet_by_name(shop_input,remove_pet)
+  index_loop = 0
+  for pet in shop_input[:pets]
+    if pet[:name] == remove_pet
+      shop_input[:pets].delete_at(index_loop)
+    end
+    index_loop += 1
+  end
+end
+
+def add_pet_to_stock(shop_input,new_pet)
+  shop_input[:pets] << new_pet
+end
+
+def customer_cash()
+
+end
+
+def remove_customer_cash()
+
+end
+
+def customer_pet_count()
+
+end
+
+def add_pet_to_customer()
+
+end
